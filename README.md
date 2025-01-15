@@ -7,27 +7,28 @@
 
 右上角运行一下，确定克隆项目到自己空间，点击立即运行，服务器开启后点右上角进入开发环境。
 
-![1](https://github.com/walnutsandwich/free-vocal-separation/blob/main/pics/%257B540F530C-A7B6-4304-836A-AF1555C50FD2%257D.png))](https://github.com/walnutsandwich/free-vocal-separation/blob/main/pics/%257B540F530C-A7B6-4304-836A-AF1555C50FD2%257D.png)
+![1](https://github.com/walnutsandwich/free-vocal-separation/blob/main/pics/%257B540F530C-A7B6-4304-836A-AF1555C50FD2%257D.png)
 
-
+![1](https://github.com/walnutsandwich/free-vocal-separation/blob/main/pics/%7BE6FDD176-5B3B-4a63-8091-1A19924463DE%7D.png)
 
 然后点击这里的Terminal 进入服务器命令界面：
-
+![2](https://github.com/walnutsandwich/free-vocal-separation/blob/main/pics/%7B31131E30-C1E1-4693-A1C4-4AA29860DFBE%7D.png)
 
 在 /gemini/code/ 目录下输入下面命令，确认执行即可启动。
 
 bash start_msst.sh
 
 等待一二分钟左右，可以看到命令行出现 Running on local URL:http://0.0.0.0:7860 表示webUI界面启动成功 
-
+![2](https://github.com/walnutsandwich/free-vocal-separation/blob/main/pics/0.png)
 
 此时可以在右侧新添加一个端口 7860 ，打开得到的外部访问连接，即可打开 MSST 的webUI 工作界面：
 
-
+![2](https://github.com/walnutsandwich/free-vocal-separation/blob/main/pics/1.png)
+![2](https://github.com/walnutsandwich/free-vocal-separation/blob/main/pics/2.png)
 
 确定添加端口后，点击外部访问链接，即可进入在线的 MSST-WebUI 
 
-
+![2](https://github.com/walnutsandwich/free-vocal-separation/blob/main/pics/3.png)
 
 
 使用示例
@@ -35,17 +36,18 @@ bash start_msst.sh
 在左侧的 Select model category 中选择 vocals_models, 右边 Select model 选择 model_bs_roformer_ep_368_sdr_12.9628.ckpt , 这是最推荐的人声伴奏分离模型。
 
 下面一行选择默认的GPU，和输出音频格式，可以是 wav/mp3/flac 输出音频格式下面要选择要输出的分离结果，人声还是伴奏，或者两个都输出。
-
+![3](https://github.com/walnutsandwich/free-vocal-separation/blob/main/pics/4.png)
 
 再下方的 Use CPU 和 Using TTA 可以不勾选，然后在 Input audio 界面中上传音频文件（如果没有合适的可以先下载左边 /gemini/code/test.wav 上传做测试），音频可以是 wav/mp3/flac 格式，其他高级设置保持默认即可，如果要调batch大小（参考 12G 显存设置建议不超过 10），然后点击 最下方的 Input audio separation 按钮启动分离。
-
+![3](https://github.com/walnutsandwich/free-vocal-separation/blob/main/pics/5.png)
 
 分离过程中显存占用情况如下，大约等待跟该音频时长一样的时间后，该音频即可分离完成，请在左侧代码文件目录 /gemini/code/MSST-WebUI/results 文件夹下下载输出结果听听效果。
 
-
+![3](https://github.com/walnutsandwich/free-vocal-separation/blob/main/pics/6.png)
+![3](https://github.com/walnutsandwich/free-vocal-separation/blob/main/pics/7.png)
 
 分离后的效果可以参考项目地址下方介绍中的音频试听：
-
+![3](https://github.com/walnutsandwich/free-vocal-separation/blob/main/pics/QQ%E6%88%AA%E5%9B%BE20241203131227.png)
 
 模型说明
 
